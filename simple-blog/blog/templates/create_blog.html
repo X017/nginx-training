@@ -32,7 +32,7 @@
         <!-- Header -->
         <div class="mb-8 border-b border-gray-800 pb-4">
             <h1 class="text-3xl font-bold mb-2">Create New Post</h1>
-            <p class="text-gray-400">Posting as @{{ user.username }}</p>
+            <p class="text-gray-400">Posting as @{{ request.user.username }}</p>
         </div>
 
         <!-- Form -->
@@ -54,26 +54,37 @@
             <div class="form-control">
                 <select 
                     name="category" 
-                    class="select select-bordered w-full bg-gray-900 border-gray-700 text-white"
-                    {% if not categories %}disabled{% endif %}>
+                    class="select select-bordered w-full bg-gray-900 border-gray-700 text-white">
                     
-                    <option value="" {% if not form.category.value %}selected{% endif %}>Select a category (optional)</option>
+                    <option value="" selected>Select a category (optional)</option>
                     {% for category in categories %}
-                        <option value="{{ category.id }}" 
-                            {% if form.category.value == category.id %}selected{% endif %}>
-                            {{ category }}
-                        </option>
+                        {% if category.creator_id == request.user.id %}
+                            <option value="{{ category.id }}" 
+                                {% if form.category.value == category.id|stringformat:"s" %}selected{% endif %}>
+                                    {{ category.category_name }}
+                            </option>
+                        {% endif %}
                     {% endfor %}
                 </select>
-                {% if not categories %}
-                    <p class="text-sm text-gray-500 mt-1">No categories available</p>
-                {% endif %}
-                <!-- Add this near the category select field -->
-                  <div class="mt-2">
-                      <a href="{% url 'blog:create_category' %}" class="text-sm text-primary hover:underline">
-                          + Create New Category
-                      </a>
-</div>
+                
+                {# Check if user has any categories #}
+                {% with has_categories=False %}
+                    {% for category in categories %}
+                        {% if category.creator_id == request.user.id %}
+                            {% with has_categories=True %}
+                            {% endwith %}
+                        {% endif %}
+                    {% endfor %}
+                    {% if not has_categories %}
+                        <p class="text-sm text-gray-500 mt-1">You haven't created any categories yet</p>
+                    {% endif %}
+                {% endwith %}
+                
+                <div class="mt-2">
+                    <a href="{% url 'blog:create_category' %}" class="text-sm text-primary hover:underline">
+                        + Create New Category
+                    </a>
+                </div>
             </div>
 
             <!-- Text Field -->

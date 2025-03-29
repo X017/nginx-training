@@ -87,6 +87,6 @@ class CreateCategoryView(LoginRequiredMixin, CreateView):
     success_url = reverse_lazy('blog:create_blog')  # Redirect to blog creation after
     
     def form_valid(self, form):
-        # You could add additional logic here if needed
+        form.instance.creator = self.request.user  # Set the author here
         return super().form_valid(form)
 

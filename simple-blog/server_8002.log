@@ -1,3 +1,578 @@
 Watching for file changes with StatReloader
-[29/Mar/2025 15:37:00] "GET / HTTP/1.0" 200 14874
-[29/Mar/2025 15:38:33] "GET / HTTP/1.0" 200 13354
+[29/Mar/2025 16:14:02] "GET /admin HTTP/1.0" 301 0
+[29/Mar/2025 16:14:02] "GET /admin/login/?next=/blog/admin/ HTTP/1.0" 200 4442
+[29/Mar/2025 16:14:07] "GET /admin/ HTTP/1.0" 200 7807
+[29/Mar/2025 16:14:08] "GET /admin/jsi18n/ HTTP/1.0" 200 12738
+[29/Mar/2025 16:14:14] "POST /admin/blog/blogpost/ HTTP/1.0" 302 0
+[29/Mar/2025 16:14:14] "GET /admin/jsi18n/ HTTP/1.0" 200 12738
+[29/Mar/2025 16:14:59] "GET / HTTP/1.0" 200 4964
+[29/Mar/2025 16:15:17] "GET / HTTP/1.0" 200 4964
+[29/Mar/2025 16:15:44] "GET / HTTP/1.0" 200 4964
+[29/Mar/2025 16:16:07] "GET / HTTP/1.0" 200 4964
+[29/Mar/2025 16:16:58] "GET /login/?next=/blog/create-blog/ HTTP/1.0" 200 3195
+[29/Mar/2025 16:17:10] "GET /register/ HTTP/1.0" 200 3695
+[29/Mar/2025 16:17:31] "POST /register/ HTTP/1.0" 302 0
+[29/Mar/2025 16:17:37] "GET /create-blog/ HTTP/1.0" 302 0
+[29/Mar/2025 16:17:45] "GET /create-blog/ HTTP/1.0" 302 0
+[29/Mar/2025 16:17:56] "POST /login/?next=/blog/create-blog/ HTTP/1.0" 302 0
+[29/Mar/2025 16:18:21] "GET /category/create/ HTTP/1.0" 200 2001
+[29/Mar/2025 16:18:36] "GET /create-blog/ HTTP/1.0" 200 5216
+/home/x017/my-projects/nginx-service/simple-blog/blog/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 29, 2025 - 16:09:09
+Django version 5.1.7, using settings 'core.settings'
+Starting development server at http://0.0.0.0:8002/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1012, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 126, in inner_run
+    autoreload.raise_last_exception()
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/utils/autoreload.py", line 87, in raise_last_exception
+    raise _exception[1]
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 394, in execute
+    autoreload.check_errors(django.setup)()
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/apps/registry.py", line 116, in populate
+    app_config.import_models()
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/apps/config.py", line 269, in import_models
+    self.models_module = import_module(models_module_name)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1133, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1063, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/x017/my-projects/nginx-service/simple-blog/blog/models.py", line 9
+    creator = models.ForeignKey(User,on_delete=DO_NOTHING
+                               ^
+SyntaxError: '(' was never closed
+/home/x017/my-projects/nginx-service/simple-blog/blog/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/x017/my-projects/nginx-service/simple-blog/blog/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 29, 2025 - 16:20:34
+Django version 5.1.7, using settings 'core.settings'
+Starting development server at http://0.0.0.0:8002/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+[29/Mar/2025 16:45:56] "GET /create-blog/ HTTP/1.0" 302 0
+[29/Mar/2025 16:49:00] "GET /create-blog/ HTTP/1.0" 302 0
+[29/Mar/2025 16:49:07] "GET /login/ HTTP/1.0" 200 3195
+[29/Mar/2025 16:49:12] "GET / HTTP/1.0" 200 4964
+[29/Mar/2025 16:49:36] "GET / HTTP/1.0" 200 4964
+[29/Mar/2025 16:49:52] "GET /category/create/ HTTP/1.0" 200 2001
+[29/Mar/2025 16:49:55] "GET /create-blog/ HTTP/1.0" 200 5129
+[29/Mar/2025 16:50:07] "POST /create-blog/ HTTP/1.0" 302 0
+[29/Mar/2025 16:50:10] "GET /create-blog/ HTTP/1.0" 200 5129
+[29/Mar/2025 16:50:16] "GET / HTTP/1.0" 200 8192
+[29/Mar/2025 16:50:41] "GET /create-blog/ HTTP/1.0" 200 5129
+[29/Mar/2025 16:50:50] "GET /category/create/ HTTP/1.0" 200 2001
+[29/Mar/2025 16:50:54] "GET /create-blog/ HTTP/1.0" 200 5257
+[29/Mar/2025 16:51:04] "GET / HTTP/1.0" 200 9916
+[29/Mar/2025 16:52:32] "GET /create-blog/ HTTP/1.0" 200 5542
+[29/Mar/2025 16:53:06] "GET / HTTP/1.0" 200 9916
+[29/Mar/2025 16:53:15] "GET /create-blog/ HTTP/1.0" 200 5542
+Internal Server Error: /blog/create-blog/
+Traceback (most recent call last):
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 489, in parse
+    raise self.error(token, e)
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 605, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 706, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '% if request.user == category.creator %' from '% if request.user == category.creator %'
+[29/Mar/2025 16:55:55] "GET /create-blog/ HTTP/1.0" 500 173298
+Internal Server Error: /blog/create-blog/
+Traceback (most recent call last):
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 489, in parse
+    raise self.error(token, e)
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 605, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 706, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '% if request.user == category.creator %' from '% if request.user == category.creator %'
+[29/Mar/2025 16:55:56] "GET /create-blog/ HTTP/1.0" 500 173298
+[29/Mar/2025 16:56:25] "GET /category/create/ HTTP/1.0" 200 2001
+[29/Mar/2025 16:56:27] "GET /create-blog/ HTTP/1.0" 200 5646
+[29/Mar/2025 16:57:08] "GET /create-blog/ HTTP/1.0" 200 5385
+[29/Mar/2025 16:58:07] "GET /create-blog/ HTTP/1.0" 200 5757
+[29/Mar/2025 16:59:07] "GET /create-blog/ HTTP/1.0" 200 5685
+[29/Mar/2025 17:00:15] "GET /create-blog/ HTTP/1.0" 200 5700
+[29/Mar/2025 17:00:33] "POST /category/create/ HTTP/1.0" 302 0
+/home/x017/my-projects/nginx-service/simple-blog/blog/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 29, 2025 - 16:21:11
+Django version 5.1.7, using settings 'core.settings'
+Starting development server at http://0.0.0.0:8002/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+[29/Mar/2025 17:01:49] "GET /create-blog/ HTTP/1.0" 200 5864
+[29/Mar/2025 17:01:53] "POST /category/create/ HTTP/1.0" 302 0
+[29/Mar/2025 17:02:28] "GET /create-blog/ HTTP/1.0" 200 6018
+[29/Mar/2025 17:03:34] "GET /create-blog/ HTTP/1.0" 200 5972
+[29/Mar/2025 17:04:06] "GET /admin/blog/category/ HTTP/1.0" 200 12885
+[29/Mar/2025 17:04:11] "POST /admin/blog/category/ HTTP/1.0" 200 10779
+[29/Mar/2025 17:04:13] "GET /admin/blog/category/ HTTP/1.0" 200 9020
+[29/Mar/2025 17:04:55] "GET / HTTP/1.0" 200 4964
+[29/Mar/2025 17:04:59] "GET /category/create/ HTTP/1.0" 200 2001
+[29/Mar/2025 17:05:02] "GET /create-blog/ HTTP/1.0" 200 4397
+[29/Mar/2025 17:05:28] "GET /create-blog/ HTTP/1.0" 200 4407
+[29/Mar/2025 17:05:47] "POST /login/ HTTP/1.0" 200 3439
+[29/Mar/2025 17:06:04] "POST /register/ HTTP/1.0" 302 0
+[29/Mar/2025 17:06:06] "GET /create-blog/ HTTP/1.0" 200 4407
+[29/Mar/2025 17:06:22] "GET /login/ HTTP/1.0" 200 3436
+[29/Mar/2025 17:06:24] "GET / HTTP/1.0" 200 4964
+[29/Mar/2025 17:06:36] "POST /create-blog/ HTTP/1.0" 302 0
+Internal Server Error: /blog/create-blog/
+Traceback (most recent call last):
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 961, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/smartif.py", line 198, in parse
+    raise self.error_class(
+django.template.exceptions.TemplateSyntaxError: Unused 'andrequest.user' at end of if expression.
+[29/Mar/2025 17:07:36] "GET /create-blog/ HTTP/1.0" 500 171813
+[29/Mar/2025 17:08:16] "GET /create-blog/ HTTP/1.0" 200 4405
+Internal Server Error: /blog/create-blog/
+Traceback (most recent call last):
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 1035, in find_library
+    return parser.libraries[name]
+           ~~~~~~~~~~~~~~~~^^^^^^
+KeyError: 'custom_filters'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 1097, in load
+    lib = find_library(parser, name)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 1037, in find_library
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'custom_filters' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+i18n
+l10n
+log
+static
+tz
+[29/Mar/2025 17:29:20] "GET /create-blog/ HTTP/1.0" 500 161866
+Internal Server Error: /blog/create-blog/
+Traceback (most recent call last):
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 1531, in do_with
+    extra_context = token_kwargs(remaining_bits, parser, support_legacy=True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 1119, in token_kwargs
+    kwargs[key] = parser.compile_filter(value)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 605, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 701, in __init__
+    filter_func = parser.find_filter(filter_name)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 611, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'filter_creator'
+[29/Mar/2025 17:31:36] "GET /create-blog/ HTTP/1.0" 500 169155
+Internal Server Error: /blog/
+Traceback (most recent call last):
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 1531, in do_with
+    extra_context = token_kwargs(remaining_bits, parser, support_legacy=True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 1119, in token_kwargs
+    kwargs[key] = parser.compile_filter(value)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 605, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 701, in __init__
+    filter_func = parser.find_filter(filter_name)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 611, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'filter_creator'
+[29/Mar/2025 17:31:40] "GET / HTTP/1.0" 500 169247
+[29/Mar/2025 17:34:45] "GET /category/create/ HTTP/1.0" 200 2001
+Internal Server Error: /blog/create-blog/
+Traceback (most recent call last):
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 1531, in do_with
+    extra_context = token_kwargs(remaining_bits, parser, support_legacy=True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 1119, in token_kwargs
+    kwargs[key] = parser.compile_filter(value)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 605, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 701, in __init__
+    filter_func = parser.find_filter(filter_name)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/nginx-service/simple-blog/venv/lib/python3.12/site-packages/django/template/base.py", line 611, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'filter_creator'
+[29/Mar/2025 17:34:47] "GET /create-blog/ HTTP/1.0" 500 169319
+[29/Mar/2025 17:36:47] "GET /category/create/ HTTP/1.0" 200 2001
+[29/Mar/2025 17:36:49] "GET /create-blog/ HTTP/1.0" 200 5210
+[29/Mar/2025 17:37:07] "POST /login/ HTTP/1.0" 302 0
+[29/Mar/2025 17:37:20] "GET /category/create/ HTTP/1.0" 200 2001
+[29/Mar/2025 17:37:23] "GET /create-blog/ HTTP/1.0" 200 5305
+[29/Mar/2025 17:37:30] "GET / HTTP/1.0" 200 4353
+[29/Mar/2025 17:38:44] "GET /create-blog/ HTTP/1.0" 200 5305
