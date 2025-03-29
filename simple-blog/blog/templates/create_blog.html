@@ -16,6 +16,15 @@
             min-height: 300px;
             resize: none;
         }
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+            background-size: 1em;
+        }
     </style>
 </head>
 <body>
@@ -30,14 +39,45 @@
         <form method="post" class="space-y-4">
             {% csrf_token %}
             
+            <!-- Title Field -->
+            <div class="form-control">
+                <input 
+                    type="text" 
+                    name="title" 
+                    class="input input-bordered w-full bg-gray-900 border-gray-700 text-white placeholder-gray-500"
+                    placeholder="Post title"
+                    value="{{ form.title.value|default:'' }}"
+                    required>
+            </div>
+            
+            <!-- Category Field -->
+            <div class="form-control">
+                <select 
+                    name="category" 
+                    class="select select-bordered w-full bg-gray-900 border-gray-700 text-white"
+                    {% if not categories %}disabled{% endif %}>
+                    
+                    <option value="" {% if not form.category.value %}selected{% endif %}>Select a category (optional)</option>
+                    {% for category in categories %}
+                        <option value="{{ category.id }}" 
+                            {% if form.category.value == category.id %}selected{% endif %}>
+                            {{ category }}
+                        </option>
+                    {% endfor %}
+                </select>
+                {% if not categories %}
+                    <p class="text-sm text-gray-500 mt-1">No categories available</p>
+                {% endif %}
+                <!-- Add this near the category select field -->
+                  <div class="mt-2">
+                      <a href="{% url 'blog:create_category' %}" class="text-sm text-primary hover:underline">
+                          + Create New Category
+                      </a>
+</div>
+            </div>
+
             <!-- Text Field -->
             <div class="form-control">
-              <div>
-              <textarea 
-                class="text fieldarea-bordered bg-gray-900 border-gray-700 text-white placeholder-gray-500"
-                name="title" required>{{form.title.value|default:''}}
-              </div>
-              </textarea>
                 <textarea 
                     name="text" 
                     class="textarea textarea-bordered w-full bg-gray-900 border-gray-700 text-white placeholder-gray-500"

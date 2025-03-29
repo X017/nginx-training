@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html data-theme="dark" class="bg-[#0e0e0e]">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Category</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet">
+    <style>
+        body { background-color: #0e0e0e; color: white; }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto px-4 py-8 max-w-3xl">
+        <!-- Header -->
+        <div class="mb-8 border-b border-gray-800 pb-4">
+            <h1 class="text-3xl font-bold mb-2">Create New Category</h1>
+            <p class="text-gray-400">Add a new content category</p>
+        </div>
+
+        <!-- Form -->
+        <form method="post" class="space-y-4">
+            {% csrf_token %}
+            
+            <!-- Category Name Field -->
+            <div class="form-control">
+                <input 
+                    type="text" 
+                    name="category_name" 
+                    class="input input-bordered w-full bg-gray-900 border-gray-700 text-white placeholder-gray-500"
+                    placeholder="Enter category name"
+                    required>
+            </div>
+
+            <!-- Form Actions -->
+            <div class="flex justify-end gap-4 pt-6">
+                <a href="{% url 'blog:create_blog' %}" class="btn btn-outline">Back to Post</a>
+                <button type="submit" class="btn btn-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                    </svg>
+                    Create Category
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

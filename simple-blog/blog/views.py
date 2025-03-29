@@ -6,7 +6,7 @@ from django.contrib.auth.views import LoginView
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
-from .models import BlogPost
+from .models import BlogPost, Category
 
 class DaisyUILoginView(LoginView):
     template_name = 'login.html'
@@ -22,7 +22,7 @@ class DaisyUILoginView(LoginView):
 class DaisyUIRegisterView(CreateView):
     form_class = UserCreationForm
     template_name = 'register.html'
-    success_url = 'blog/login'
+    success_url = '/blog'
     
     def form_valid(self,form):
         response = super().form_valid(form)
@@ -42,6 +42,11 @@ class CreateBlogPostView(LoginRequiredMixin,CreateView):
     def form_valid(self, form):
         form.instance.author = self.request.user  # Set the author here
         return super().form_valid(form)
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['categories'] = Category.objects.all()  # Fetch all categories
+        return context
+
 class ViewBlogPostsViews(ListView):
     model = BlogPost
     template_name = 'all_blogs.html'
@@ -59,7 +64,7 @@ class BlogPostUpdateView(LoginRequiredMixin, UpdateView):
         return super().get_queryset().filter(author=self.request.user)
     
     def get_success_url(self):
-        return reverse_lazy('post_list')  # Redirect to post list after edit
+        return reverse_lazy('blog:post_list')  # Redirect to post list after edit
 
 
 
@@ -74,3 +79,14 @@ class BlogPostDeleteView(LoginRequiredMixin, DeleteView):
     # Only allow authors to delete
     def get_queryset(self):
         return super().get_queryset().filter(author=self.request.user)
+
+class CreateCategoryView(LoginRequiredMixin, CreateView):
+    model = Category
+    fields = ['category_name']
+    template_name = 'create_category.html'
+    success_url = reverse_lazy('blog:create_blog')  # Redirect to blog creation after
+    
+    def form_valid(self, form):
+        # You could add additional logic here if needed
+        return super().form_valid(form)
+
