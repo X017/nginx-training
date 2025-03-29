@@ -1,0 +1,89 @@
+Watching for file changes with StatReloader
+/home/x017/my-projects/simple-blog/blog/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 29, 2025 - 08:51:32
+Django version 5.1.7, using settings 'core.settings'
+Starting development server at http://0.0.0.0:8002/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+[29/Mar/2025 08:56:15] "GET / HTTP/1.0" 200 8603
+[29/Mar/2025 08:56:23] "GET / HTTP/1.0" 200 8603
+/home/x017/my-projects/simple-blog/core/settings.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 29, 2025 - 08:56:02
+Django version 5.1.7, using settings 'core.settings'
+Starting development server at http://0.0.0.0:8002/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+[29/Mar/2025 08:57:09] "GET / HTTP/1.0" 200 8628
+/home/x017/my-projects/simple-blog/core/settings.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 29, 2025 - 08:57:01
+Django version 5.1.7, using settings 'core.settings'
+Starting development server at http://0.0.0.0:8002/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+[29/Mar/2025 08:57:54] "GET /posts/6/edit/ HTTP/1.0" 200 1657
+Internal Server Error: /blog/posts/6/delete/
+Traceback (most recent call last):
+  File "/home/x017/my-projects/simple-blog/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/simple-blog/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/simple-blog/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/simple-blog/venv/lib/python3.12/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/simple-blog/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/simple-blog/blog/views.py", line 71, in get
+    return self.delete(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/simple-blog/venv/lib/python3.12/site-packages/django/views/generic/edit.py", line 226, in delete
+    success_url = self.get_success_url()
+                  ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x017/my-projects/simple-blog/venv/lib/python3.12/site-packages/django/views/generic/edit.py", line 238, in get_success_url
+    raise ImproperlyConfigured("No URL to redirect to. Provide a success_url.")
+django.core.exceptions.ImproperlyConfigured: No URL to redirect to. Provide a success_url.
+[29/Mar/2025 09:00:06] "GET /posts/6/delete/ HTTP/1.0" 500 82713
+/home/x017/my-projects/simple-blog/blog/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 29, 2025 - 08:57:44
+Django version 5.1.7, using settings 'core.settings'
+Starting development server at http://0.0.0.0:8002/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+[29/Mar/2025 09:00:19] "GET /posts/6/delete/ HTTP/1.0" 302 0
+[29/Mar/2025 09:00:21] "GET /posts/5/delete/ HTTP/1.0" 302 0
+[29/Mar/2025 09:00:22] "GET / HTTP/1.0" 200 5628
+[29/Mar/2025 09:00:24] "GET / HTTP/1.0" 200 4121
+[29/Mar/2025 09:00:27] "GET / HTTP/1.0" 200 2582
+[29/Mar/2025 09:00:29] "GET / HTTP/1.0" 200 1273
+[29/Mar/2025 09:28:49] "GET / HTTP/1.0" 200 1273
+/home/x017/my-projects/simple-blog/blog/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 29, 2025 - 09:00:14
+Django version 5.1.7, using settings 'core.settings'
+Starting development server at http://0.0.0.0:8002/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader

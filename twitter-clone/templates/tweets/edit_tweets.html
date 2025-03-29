@@ -1,0 +1,44 @@
+{% extends 'tweets/base.html' %}
+
+{% block content %}
+<div class="max-w-2xl mx-auto p-4">
+    <div class="card bg-base-100 shadow-xl">
+        <div class="card-body">
+            <h2 class="card-title text-primary">
+                Edit Tweet
+            </h2>
+            
+            <!-- Form with pre-filled content -->
+            <form method="post">
+                {% csrf_token %}
+                
+                <!-- Textarea with existing tweet content -->
+                <div class="form-control">
+                    <textarea 
+                        name="text" 
+                        class="textarea textarea-bordered h-32" 
+                        placeholder="What's happening?"
+                        required>{{ form.text.value }}</textarea>
+                    
+                    <!-- Show field errors if any -->
+                    {% if form.text.errors %}
+                    <div class="alert alert-error mt-2">
+                        {{ form.text.errors }}
+                    </div>
+                    {% endif %}
+                </div>
+                
+                <!-- Action buttons -->
+                <div class="card-actions justify-end mt-4">
+                    <a href="{% url 'tweets:list' %}" class="btn btn-ghost">
+                        Cancel
+                    </a>
+                    <button type="submit" class="btn btn-primary">
+                        Save Changes
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html data-theme="light" class="min-h-full">
+<head>
+    <title>Twitter Clone</title>
+    <!-- Daisy UI via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet">
+    <!-- Alpine for interactivity -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js"></script>
+</head>
+<body class="min-h-screen bg-base-200">
+    <!-- Navbar -->
+    <div class="navbar bg-base-100 shadow-lg">
+        <div class="flex-1">
+            <a href="{% url 'tc:tweet-list' %}" class="btn btn-ghost normal-case text-xl">Twittar</a>
+        </div>
+        <div class="flex-none gap-2">
+            <div class="dropdown dropdown-end">
+                <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                    <div class="w-10 rounded-full">
+                        <span class="text-2xl">👤</span>
+                    </div>
+                </label>
+                <ul tabindex="0" class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                    <li><a href="{% url 'tweet-create' %}">New Tweet</a></li>
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-4">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer footer-center p-4 bg-base-300 text-base-content">
+        <aside>
+            <p>© 2023 Twittar - A Daisy UI Twitter Clone</p>
+        </aside>
+    </footer>
+</body>
+</html>

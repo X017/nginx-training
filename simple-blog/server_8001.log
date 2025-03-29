@@ -1,0 +1,64 @@
+Watching for file changes with StatReloader
+/home/x017/my-projects/simple-blog/blog/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 29, 2025 - 08:51:32
+Django version 5.1.7, using settings 'core.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+Not Found: /'
+[29/Mar/2025 08:56:13] "GET /' HTTP/1.0" 404 3767
+[29/Mar/2025 08:56:17] "GET /posts/6/delete HTTP/1.0" 301 0
+[29/Mar/2025 08:56:27] "GET /posts/1/delete HTTP/1.0" 301 0
+/home/x017/my-projects/simple-blog/core/settings.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 29, 2025 - 08:56:02
+Django version 5.1.7, using settings 'core.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+/home/x017/my-projects/simple-blog/core/settings.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 29, 2025 - 08:57:01
+Django version 5.1.7, using settings 'core.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+[29/Mar/2025 08:57:52] "GET / HTTP/1.0" 200 8628
+[29/Mar/2025 09:00:05] "GET / HTTP/1.0" 200 8663
+/home/x017/my-projects/simple-blog/blog/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 29, 2025 - 08:57:44
+Django version 5.1.7, using settings 'core.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+[29/Mar/2025 09:00:17] "GET / HTTP/1.0" 200 8663
+[29/Mar/2025 09:00:19] "GET / HTTP/1.0" 200 7144
+[29/Mar/2025 09:00:21] "GET / HTTP/1.0" 200 5628
+[29/Mar/2025 09:00:24] "GET /posts/3/delete/ HTTP/1.0" 302 0
+[29/Mar/2025 09:00:27] "GET /posts/1/delete/ HTTP/1.0" 302 0
+[29/Mar/2025 09:00:29] "GET /posts/2/delete/ HTTP/1.0" 302 0
+[29/Mar/2025 09:16:07] "GET / HTTP/1.0" 200 1273
+/home/x017/my-projects/simple-blog/blog/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 29, 2025 - 09:00:14
+Django version 5.1.7, using settings 'core.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader

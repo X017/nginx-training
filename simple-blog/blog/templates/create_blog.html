@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html data-theme="dark" class="bg-[#0e0e0e]">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Post</title>
+    <!-- Tailwind + DaisyUI -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0e0e0e;
+            color: white;
+        }
+        .textarea {
+            min-height: 300px;
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto px-4 py-8 max-w-3xl">
+        <!-- Header -->
+        <div class="mb-8 border-b border-gray-800 pb-4">
+            <h1 class="text-3xl font-bold mb-2">Create New Post</h1>
+            <p class="text-gray-400">Posting as @{{ user.username }}</p>
+        </div>
+
+        <!-- Form -->
+        <form method="post" class="space-y-4">
+            {% csrf_token %}
+            
+            <!-- Text Field -->
+            <div class="form-control">
+              <div>
+              <textarea 
+                class="text fieldarea-bordered bg-gray-900 border-gray-700 text-white placeholder-gray-500"
+                name="title" required>{{form.title.value|default:''}}
+              </div>
+              </textarea>
+                <textarea 
+                    name="text" 
+                    class="textarea textarea-bordered w-full bg-gray-900 border-gray-700 text-white placeholder-gray-500"
+                    placeholder="Write your post here..."
+                    required>{{ form.text.value|default:'' }}</textarea>
+            </div>
+
+            <!-- Form Actions -->
+            <div class="flex justify-end gap-4 pt-6">
+                <a href="/" class="btn btn-outline">Cancel</a>
+                <button type="submit" class="btn btn-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                    </svg>
+                    Publish
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- DaisyUI + Tailwind -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        gray: {
+                            900: '#111111',
+                            800: '#1e1e1e',
+                            700: '#2d2d2d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

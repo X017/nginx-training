@@ -1,0 +1,63 @@
+{% extends 'tweets/base.html' %}
+{% block title %}New Tweet | Twittar{% endblock %}
+
+{% block content %}
+<div class="max-w-2xl mx-auto p-4">
+    <div class="card bg-base-100 shadow-xl">
+        <div class="card-body">
+            <h2 class="card-title text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                </svg>
+                Compose New Tweet
+            </h2>
+            
+            <form method="post" x-data="{charsRemaining: 2000}">
+                {% csrf_token %}
+                
+                <div class="form-control">
+                    <textarea 
+                        name="text" 
+                        class="textarea textarea-bordered h-32 textarea-primary" 
+                        placeholder="What's happening?"
+                        x-model="text"
+                        @input="charsRemaining = 2000 - $event.target.value.length"
+                        maxlength="2000"
+                        required></textarea>
+                    
+                    <div class="flex justify-between items-center mt-2">
+                        <span class="text-sm" 
+                              :class="{
+                                'text-error': charsRemaining < 0,
+                                'text-warning': charsRemaining >= 0 && charsRemaining <= 50,
+                                'text-success': charsRemaining > 50
+                              }"
+                              x-text="`${charsRemaining} characters remaining`">
+                        </span>
+                        <button type="submit" 
+                                class="btn btn-primary gap-2"
+                                :class="{'btn-disabled': charsRemaining < 0}"
+                                :disabled="charsRemaining < 0">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+                            </svg>
+                            Tweet
+                        </button>
+                    </div>
+                    
+                    {% if form.text.errors %}
+                    <div class="alert alert-error mt-2 shadow-lg">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>{{ form.text.errors|striptags }}</span>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

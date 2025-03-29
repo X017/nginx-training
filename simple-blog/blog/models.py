@@ -1,0 +1,16 @@
+from django.db import models
+from django.contrib.auth.models import User
+
+# Create your models here.
+
+class Category(models.Model):
+    category_name = models.CharField(max_length=256,null=True,blank=True)
+
+class BlogPost(models.Model):
+    author = models.ForeignKey(User,on_delete=models.DO_NOTHING)
+    title = models.CharField(max_length=256,null=True,blank=True)
+    text = models.TextField()
+    category = models.ForeignKey(Category,on_delete=models.CASCADE,null=True,blank=True)
+
+    created_at = models.DateTimeField(auto_now_add=True,null=True,blank=True)
+    updated_at = models.DateTimeField(auto_now=True,null=True,blank=True)

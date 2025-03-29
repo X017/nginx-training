@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html data-theme="light">  <!-- Try 'dark', 'cupcake', 'corporate' etc. -->
+<head>
+    <title>Login</title>
+    <!-- Daisy UI CDN via Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="min-h-screen hero bg-base-200">
+        <div class="flex-col hero-content lg:flex-row-reverse">
+            <div class="text-center lg:text-left">
+                <h1 class="text-5xl font-bold">Login now!</h1>
+                <p class="py-6">Access your account to continue</p>
+            </div>
+            
+            <div class="w-full max-w-sm shadow-2xl card bg-base-100">
+                <div class="card-body">
+                    <!-- Messages -->
+                    {% if messages %}
+                        {% for message in messages %}
+                        <div class="alert alert-{% if message.tags == 'error' %}error{% else %}success{% endif %}">
+                            <span>{{ message }}</span>
+                        </div>
+                        {% endfor %}
+                    {% endif %}
+                    
+                    <form method="post">
+                        {% csrf_token %}
+                        
+                        <!-- Username Field -->
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text">Username</span>
+                            </label>
+                            <input 
+                                type="text" 
+                                name="username" 
+                                placeholder="username" 
+                                class="input input-bordered" 
+                                required
+                            />
+                        </div>
+                        
+                        <!-- Password Field -->
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text">Password</span>
+                            </label>
+                            <input 
+                                type="password" 
+                                name="password" 
+                                placeholder="password" 
+                                class="input input-bordered" 
+                                required
+                            />
+                            <label class="label">
+                                <a href="#" class="label-text-alt link">Forgot password?</a>
+                            </label>
+                        </div>
+                        
+                        <!-- Submit Button -->
+                        <div class="mt-6 form-control">
+                            <button class="btn btn-primary">Login</button>
+                        </div>
+                    </form>
+                    
+                    <!-- Divider -->
+                    <div class="divider">OR</div>
+                    
+                    <!-- Alternative Actions -->
+                    <div class="flex justify-center gap-2">
+                        <button class="btn btn-outline">Sign up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

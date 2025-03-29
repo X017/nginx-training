@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html data-theme="light">
+<head>
+    <title>Register</title>
+    <!-- Daisy UI CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="min-h-screen hero bg-base-200">
+        <div class="flex-col hero-content lg:flex-row-reverse">
+            <div class="text-center lg:text-left">
+                <h1 class="text-5xl font-bold">Create Account</h1>
+                <p class="py-6">Join our community today</p>
+            </div>
+            
+            <div class="w-full max-w-sm shadow-2xl card bg-base-100">
+                <div class="card-body">
+                    <!-- Messages -->
+                    {% if messages %}
+                        {% for message in messages %}
+                        <div class="alert alert-{% if message.tags == 'error' %}error{% else %}success{% endif %}">
+                            <span>{{ message }}</span>
+                        </div>
+                        {% endfor %}
+                    {% endif %}
+                    
+                    <form method="post">
+                        {% csrf_token %}
+                        
+                        <!-- Username -->
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text">Username</span>
+                            </label>
+                            <input 
+                                type="text" 
+                                name="username" 
+                                placeholder="username" 
+                                class="input input-bordered {% if form.username.errors %}input-error{% endif %}" 
+                                required
+                            />
+                            {% if form.username.errors %}
+                                <label class="label">
+                                    {% for error in form.username.errors %}
+                                    <span class="label-text-alt text-error">{{ error }}</span>
+                                    {% endfor %}
+                                </label>
+                            {% endif %}
+                        </div>
+                        
+                        <!-- Password 1 -->
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text">Password</span>
+                            </label>
+                            <input 
+                                type="password" 
+                                name="password1" 
+                                placeholder="password" 
+                                class="input input-bordered {% if form.password1.errors %}input-error{% endif %}" 
+                                required
+                            />
+                            {% if form.password1.errors %}
+                                <label class="label">
+                                    {% for error in form.password1.errors %}
+                                    <span class="label-text-alt text-error">{{ error }}</span>
+                                    {% endfor %}
+                                </label>
+                            {% endif %}
+                        </div>
+                        
+                        <!-- Password 2 -->
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text">Confirm Password</span>
+                            </label>
+                            <input 
+                                type="password" 
+                                name="password2" 
+                                placeholder="confirm password" 
+                                class="input input-bordered {% if form.password2.errors %}input-error{% endif %}" 
+                                required
+                            />
+                            {% if form.password2.errors %}
+                                <label class="label">
+                                    {% for error in form.password2.errors %}
+                                    <span class="label-text-alt text-error">{{ error }}</span>
+                                    {% endfor %}
+                                </label>
+                            {% endif %}
+                        </div>
+                        
+                        <!-- Submit Button -->
+                        <div class="mt-6 form-control">
+                            <button type="submit" class="btn btn-primary">Register</button>
+                        </div>
+                    </form>
+                    
+                    <!-- Divider -->
+                    <div class="divider">OR</div>
+                    
+                    <!-- Login Link -->
+                    <div class="text-center">
+                        <p>Already have an account? <a href="{% url 'tweets:login' %}" class="link link-primary">Login</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

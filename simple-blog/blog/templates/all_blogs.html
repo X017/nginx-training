@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html data-theme="dark" class="bg-[#0e0e0e]">
+<head>
+    <title>Blog Posts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet">
+</head>
+<body class="min-h-screen p-4">
+    <div class="max-w-4xl mx-auto">
+        <!-- Header with Add Post Button -->
+        <div class="flex justify-between items-center mb-8">
+            <h1 class="text-3xl font-bold text-white">Recent Posts</h1>
+            <a href="/blog/create-blog/" class="btn btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                </svg>
+                Add Post
+            </a>
+        </div>
+        
+        <!-- Posts List -->
+        <div class="space-y-6">
+            {% for post in posts %}
+            <div class="card bg-gray-900 border border-gray-700">
+                <div class="card-body">
+                    <!-- Post Header -->
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="avatar placeholder">
+                            <div class="bg-neutral text-neutral-content rounded-full w-10">
+                                <span>{{ post.author.username|first|upper }}</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class="font-bold">{{ post.author.username }}</h2>
+                            <p class="text-sm text-gray-400">
+                                {{ post.created_at|date:"F j, Y g:i a" }}
+                                {{post.category.category_name }}
+                                {% if post.updated_at != post.created_at %}
+                                <span class="text-xs"></span>
+                                {% endif %}
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Post Content -->
+                    <p class="whitespace-pre-line">{{ post.text }}</p>
+                    
+                    <!-- Admin Actions -->
+                    {% if user == post.author %}
+                    <div class="card-actions justify-end mt-4">
+                        <a href="{% url 'blog:edit_post' post.id %}" class="btn btn-xs btn-outline">Edit</a>
+                        <a href="{% url 'blog:delete_post' post.id %}" class="btn btn-xs btn-error">Delete Salam</a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            {% empty %}
+            <div class="text-center py-12 text-gray-400">
+                No posts yet. <a href="{% url 'blog:create' %}" class="text-primary hover:underline">Create the first one!</a>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <!-- Pagination -->
+        {% if is_paginated %}
+        <div class="join grid grid-cols-2 mt-8">
+            {% if page_obj.has_previous %}
+            <a href="?page={{ page_obj.previous_page_number }}" class="join-item btn btn-outline">Previous</a>
+            {% endif %}
+            {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}" class="join-item btn btn-outline">Next</a>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
